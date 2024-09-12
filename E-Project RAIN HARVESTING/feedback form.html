@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/7.3.2/mdb.min.css" rel="stylesheet" />
+
+
+    <link rel="stylesheet" href="css/n.css">
+    <script type="text/javascript">
+        function Submit_Form() {
+            str1 = document.fm.fname.value;
+
+            if (str1.length == 0) {
+
+                alert("enter first name");
+
+            }
+
+            str2 = document.fm.lname.value;
+
+            if (str2.length == 0) {
+                alert("enter last name");
+            }
+
+            if (document.fm.city.selectedIndex == 0) {
+
+                alert("select your city");
+
+            }
+            reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+
+            var addr = document.fm.email.value;
+            if (reg.test(addr) == false) {
+                alert("invalid email address");
+            }
+            if (str1.length != 0 && str2.length != 0 && document.fm.city.selectedIndex != 0 && reg.test(addr) == true) {
+                window.open("abc.html");
+            }
+        }
+
+    </script>
+
+
+</head>
+
+<body>
+
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light px-4">
+        <div class="container-fluid d-flex justify-content-system">
+          <a class="navbar-brand" href="index.html"><img src="img/file.png" style="width: 55px;height: 55px;" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 fs-5 text-center">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="residn.html">Residential Harvesting!</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="com.html">Commercial Harvesting!</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="newpage.html">Products</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="aboutus.html">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="feedback form.html">Contact Us</a>
+              </li>
+             
+          </div>
+        </div>
+      </nav>
+    
+    <!--
+    - #feedbackform 
+  -->
+    <div class="flex-container">
+        <div class="flex-item" style="padding-left: 100px; ">
+            <br>
+            <div class="background" style="background-image: assets/images/HD-wallpaper-emergency-room-hospital.jpg;">
+                <form name="fm" style="">
+                    <fieldset>
+                        <h1>Your FeedBack</h1>
+
+                        <label for="fname">First Name:</label>
+                        <input type="text" name="fname" id="fname"><br>
+
+                        <label for="lname">Last Name:</label>
+                        <input type="text" name="lname" id="lname"><br>
+
+                        <label for="fname">Email:</label>
+                        <input type="text" name="email" id="email" size="30"><br>
+
+
+
+
+                        <label for="city">City:</label>
+                        <select name="city" id="city">
+                            <option value="">Select City</option>
+                            <option value="islamabad">Islamabad</option>
+                            <option value="peshawar">Peshawar</option>
+                            <option value="karachi">Karachi</option>
+                            <option value="quetta">Quetta</option>
+                            <option value="lahore">Lahore</option>
+                        </select> <br>
+
+                        <label for="comments">Comments:</label>
+                        <textarea rows="5" cols="25" name="" id="comments"></textarea><br>
+
+
+                        <input type="button" id="btn5" name="btn" value="Register" onclick="Submit_Form()">
+                        <input type="reset" id="btn5" name="reset" value="Reset" style="margin-top: 10px;">
+                    </fieldset>
+                </form>
+            </div>
+
+
+            <!-- Map -->
+
+        </div>
+        <div class="flex-item" style="padding-right: 100px;">
+            <div class="map">
+                <div
+                    class="clearfix text-formatted field field--name-mht-text field--type-text-long field--label-hidden field__item">
+                    <p><iframe style="border:0;" frameborder="0" height="650" title=""
+                            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d14472.37819861118!2d67.03455595!3d24.92884875!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2s!4v1719844764040!5m2!1sen!2s"
+                            width="500px"></iframe></p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+
+        <!-- Section: Links  -->
+        <section class="">
+            <div class="container text-center text-md-start mt-5">
+                <!-- Grid row -->
+                <div class="row mt-3">
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+                        <!-- Content -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            <img src="img/file.png" width="80px" height="80px" alt="">
+                        </h6>
+                        <p>
+                            Here you can use rows and columns to organize your footer content. Lorem ipsum
+                            dolor sit amet, consectetur adipisicing elit.
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            About
+                        </h6>
+                        <p>
+                            <a href="aboutus.html" class="text-reset">About Us</a>
+                        </p>
+                        <p>
+                            <a href="feedback form.html" class="text-reset">Contact us</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">
+                            Useful links
+                        </h6>
+                        <p>
+                            <a href="index.html" class="text-reset">Home</a>
+                        </p>
+                        <p>
+                            <a href="residn.html" class="text-reset">Residental Harvesting!</a>
+                        </p>
+                        <p>
+                            <a href="com.html" class="text-reset">Commercial Harvesting!</a>
+                        </p>
+                        <p>
+                            <a href="newpage.html" class="text-reset">Products</a>
+                        </p>
+                    </div>
+                    <!-- Grid column -->
+
+                    <!-- Grid column -->
+                    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+                        <!-- Links -->
+                        <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+                        <p><i class="fas fa-home me-3"></i> Karachi Pakistan </p>
+                        <p>
+                            <i class="fas fa-envelope me-3"></i>
+                            info@example.com
+                        </p>
+                        <p><i class="fas fa-phone me-3"></i> +92 12345678910</p>
+                        <p><i class="fas fa-print me-3"></i> +92 09876543214</p>
+                    </div>
+                    <!-- Grid column -->
+                </div>
+                <!-- Grid row -->
+            </div>
+        </section>
+        <!-- Section: Links  -->
+
+        <!-- Copyright -->
+        <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+            © 2021 Copyright:
+            <a class="text-reset fw-bold" href="https://mdbootstrap.com/">MDBootstrap.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Footer -->
+
+
+
+</body>
+
+</html>
